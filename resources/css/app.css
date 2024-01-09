@@ -1,0 +1,47 @@
+<style>
+/* «”·Ê» «·⁄‰Ê«‰ */
+.page-header h1 {
+  font-size: 3em;
+  color: #333;
+  text-align: center;
+}
+
+/* «”·Ê» «·—Ê«»ÿ */
+.page-header a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #666;
+}
+
+/* «”·Ê» ⁄‰«’— «·ÿ⁄«„ */
+.food-item {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.food-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.food-item h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.food-item a {
+  display: block;
+  padding: 10px;
+  background-color: #f8b400;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.food-item a:hover {
+  background-color: #e59400;
+}
+</style>
