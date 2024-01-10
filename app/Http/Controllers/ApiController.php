@@ -9,6 +9,7 @@ class ApiController extends Controller
 {
     public function getMenu(){
             $menus=Menu::with('meals')->get();
+            
             return response()->json($menus);
     }
 
