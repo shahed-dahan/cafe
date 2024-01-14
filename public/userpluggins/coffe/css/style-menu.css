@@ -1,0 +1,62 @@
+.page-header h1 {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+  }
+  
+  /* اسلوب الروابط */
+  .page-header a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* اسلوب عناصر الطعام */
+  .food-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px dotted #ddd;
+    text-align: center;
+  }
+  
+  .food-item img {
+    border-radius: 30%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .food-item h2 {
+    margin: 10px 0;
+    font-size: 1.6em;
+    color: #333;
+  }
+  
+  .food-item a {
+    display: block;
+    padding: 10px;
+    background-color: #5d4037;
+   
+    color: #fff;
+    text-decoration: none;
+    transition:background-color 0.3s;
+  }
+  #smalllist a:hover{
+    background-color: #d7ccc8;
+    
+  }
+  
+  .food-item a:hover {
+    background-color: #d7ccc8;
+  }
+  .page-header {
+      position: relative;
+      margin-bottom: 45px;
+      padding: 150px 0 90px 0;
+      text-align: center;
+    
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image:url("../img/header-bg.jpg");
+      
+  }

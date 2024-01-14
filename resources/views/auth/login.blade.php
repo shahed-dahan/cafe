@@ -1,5 +1,25 @@
 @extends('layouts.app')
+@section('style')
+<style>
+   .card-body{
+    background-image:url("userpluggins/coffe/img/image2.jfif");
+    background-repeat:round  ;
+ 
+   } 
+   .card{
+   margin: 50px;
 
+   }
+   #formy label {
+color:goldenrod;
+   }
+   #log{
+   background-color:goldenrod;
+   }
+  
+    </style>
+@endsection
+@yield('style')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -8,7 +28,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login') }}" id="formy">
                         @csrf
 
                         <div class="row mb-3">
@@ -53,7 +73,7 @@
 
                         <div class="row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" id="log">
                                     {{ __('Login') }}
                                 </button>
 

@@ -1,14 +1,26 @@
 @extends('UserViews.master')
-<!-- @section('style')
+@section('style')
 <style>
     .blog {
     position: relative;
     width: 100%;
     padding: 45px 0 0 0;
 }
+.page-header {
+    position: relative;
+    margin-bottom: 45px;
+    padding: 150px 0 90px 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/page-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   background-image:url("userpluggins/coffe/img/header-bg.jpg");
+}
+
     </style>
 @endsection
-@yield('style') -->
+@yield('style')
 @section('content')
 <div class="page-header mb-0">
             <div class="container">

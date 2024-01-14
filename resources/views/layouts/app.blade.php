@@ -12,6 +12,18 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+   
+<style>
+   #app{
+    background-image:url("userpluggins/coffe/img/header-bg.jpg");
+    background-repeat:space ;
+    margin:40px;
+    
+    width: 100%;
+    height: 70%;
+   }  
+
+    </style>
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])

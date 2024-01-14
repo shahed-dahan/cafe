@@ -1,89 +1,12 @@
 @extends('UserViews.master')
 @section('content')
 @section('style')
-<link rel="stylesheet" type="text/css" href="{{asset('userpluggins/css/style1.css')}}" />
-<!-- kkkk -->
-<link rel="stylesheet" type="text/css" href="{{asset('userpluggins/css/style.css')}}" />
-<style>
- body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
 
-.page-header {
-    background-color:browen;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
 
-.page-header h2 {
-    margin: 0;
-}
-
-.menu {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 1200px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.menu-img img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.menu-item h3 {
-    margin-top: 0;
-}
-
-.menu-item p {
-    margin-bottom: 0;
-}
-
-/* تنسيقات خاصة بالأحرف الكبيرة (uppercase) */
-.menu-item h3 strong {
-    text-transform: uppercase;
-    font-family: 'Dancing Script', cursive;
-}
-
-/* تنسيقات خاصة بالعناوين (headers) */
-.section-header h3 {
-  
-    color: browen;
-    font-family: 'Dancing Script', cursive;
-}
-.img1 img {
-    
-    width: 400px;
-    height: 400px;
-    border-radius: 40%;
-    object-fit: cover;
-    display: block;
-    margin: 20px; /* يوضع الصورة في الوسط أفقياً */
-}
-.row h2,strong{
-    color: brown;
-}
-
-  
-
-    </style>
-  @yield('style')
+ 
+ 
 @endsection
-
+ @yield('style')
 <div class="page-header mb-0">
             <div class="container">
                 <div class="row">

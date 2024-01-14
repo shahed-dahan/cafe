@@ -15,7 +15,8 @@
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title>Coffee</title>
-
+		<link href="{{asset('userpluggins/coffe/css/style-menu.css')}}" rel="stylesheet" />
+		<link href="{{asset('userpluggins/coffe/css/style-meal.css')}}" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
 			CSS
@@ -30,7 +31,7 @@
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/owl.carousel.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/main.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/theme/_header.scss')}}">
-			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/theme/footer.scss')}}">
+			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/theme/_footer.scss')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/theme/_home.scss')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/main.scss')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/bootstrap.scss')}}">

@@ -1,29 +1,4 @@
-<!-- <header id="header" id="home">
-					  	
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="index.html"><img src="{{asset('userpluggins/coffe/img/logo.png')}}" alt="" title="" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="/">Home</a></li>
-				         <li><a href="{{route('menu')}}">menu</a></li>
-						 <li><a href="/About">About</a></li>
-						 <li><a href="{{url('create-customers')}}">Book</a></li>
-				     
-
-				        </ul>
-				      </nav><!-- #nav-menu-container -->
-					   
-                       
-         		
-			    	<!-- </div>
-			    </div>
-			  </header> --> -->
-
-
-        <header id="header" class="header-scrolled">
+    <header id="header" class="header-scrolled">
 			<div class="header-top">
 				  	
 			    <div class="container">
@@ -31,10 +6,11 @@
 				      <div id="logo">
 				        <a href="index.html"><img src="{{asset('userpluggins/coffe/img/logo.png')}}" alt="" title=""></a>
 				      </div>
+					  
 				      <nav id="nav-menu-container">
 					  <ul class="nav-menu">
 				          <li class="menu-active"><a href="/">Home</a></li>
-				          <li><a href="{{route('menu')}}">Menu1</a></li>
+				          <li><a href="{{route('menu')}}">Menu</a></li>
 				          <li><a href="/About">About</a></li>
 				          <li><a href="{{url('create-customers')}}">book</a></li>
 				         
