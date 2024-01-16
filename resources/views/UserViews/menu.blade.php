@@ -69,10 +69,32 @@
 .food-item a:hover {
   background-color: #d7ccc8;
 }
+
+a.nav-item {
+      color: black; /* لون النص */
+      text-decoration: none; /* إزالة التأثيرات الافتراضية للرابط */
+      margin-right: 10px; /* هامش من اليمين للفصل بين الروابط */
+     
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px; /* حجم الخط */
+      display: inline-block; /* جعل الروابط على نفس السطر */
+      text-align: center; /* وضع الروابط في المنتصف */
+      padding: 10px 20px; /* إضافة حشو للروابط */
+      border: 2px solid black; /* إضافة حدود */
+      border-radius: 5px; /* تقويس حواف الروابط */
+      background-color: white; /* لون خلفية الروابط */
+    }
+
+    a.nav-item:hover {
+      background-color: lightgray; /* تغيير لون الخلفية عند تحويل الماوس فوقها */
+    
+    }
+   
     </style>
     @yield('style')
 @endsection
 @section('content')
+
 <div class="page-header mb-0" id= "menu">
             <div class="container">
                 <div class="row">
