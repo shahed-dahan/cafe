@@ -16,6 +16,7 @@
                     <div class="col-12">
                         <a href="#">Home</a>
                         <a href="#menu">Meal</a>
+                        <a href="{{url('cart')}}">cart</a>
                     </div>
                 </div>
             </div>

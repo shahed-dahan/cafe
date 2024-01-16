@@ -11,8 +11,8 @@
 					  <ul class="nav-menu">
 				          <li class="menu-active"><a href="/">Home</a></li>
 				          <li><a href="{{route('menu')}}">Menu</a></li>
-				          <li><a href="/About">About</a></li>
-				          <li><a href="{{url('create-customers')}}">book</a></li>
+				          <li><a href="{{url('about')}}">About</a></li>
+				          <li><a href="{{url('booking')}}">book</a></li>
 				         
 				          <!-- <li class="menu-has-children"><a href="" class="sf-with-ul">Pages</a>
 				            <ul style="display: none;">

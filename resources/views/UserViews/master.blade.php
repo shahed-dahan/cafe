@@ -18,9 +18,11 @@
 		<link href="{{asset('userpluggins/coffe/css/style-menu.css')}}" rel="stylesheet" />
 		<link href="{{asset('userpluggins/coffe/css/style-meal.css')}}" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+	
 			<!--
 			CSS
 			============================================= -->
+			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/bootstrap/bootstrap.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/linearicons.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/font-awesome.min.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/bootstrap.css')}}">
@@ -37,7 +39,7 @@
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/scss/bootstrap.scss')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/bootstrap/bootstrap-grid.css')}}">
 			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/bootstrap/bootstrap-reboot.css')}}">
-			<link rel="stylesheet" href="{{asset('userpluggins/coffe/css/bootstrap/bootstrap.css')}}">
+			
 		@yield('style')
 		</head>
 		<body class="sub_page">
@@ -78,11 +80,14 @@
 			<!-- End footer Area -->	
 
 			</body>
-			
+			<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<script src = "https://code.jquery.com/jquery-3.6.3.min.js"></script>
+			<script src='{{asset("userpluggins/coffe/js/jquery.js")}}'></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="{{asset('userpluggins/coffe/js/vendor/bootstrap.min.js')}}"></script>			
 			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-  			<script src="{{asset('userpluggins/coffe/js/easing.min.js')}}"></script>			
+  			<script src='{{asset("userpluggins/coffe/js/easing.min.js")}}'></script>			
 			<script src="{{asset('userpluggins/coffe/js/hoverIntent.js')}}"></script>
 			<script src="{{asset('userpluggins/coffe/js/superfish.min.js')}}"></script>	
 			<script src="{{asset('userpluggins/coffe/js/jquery.ajaxchimp.min.js')}}"></script>
@@ -93,10 +98,9 @@
 			<script src="{{asset('userpluggins/coffe/js/parallax.min.js')}}"></script>	
 			<script src="{{asset('userpluggins/coffe/js/waypoints.min.js')}}"></script>
 			<script src="{{asset('userpluggins/coffe/js/jquery.counterup.min.js')}}"></script>					
-			<script src="{{asset('userpluggins/coffe/js/mail-script.js')}}"></script>	
+			
 			<script src="{{asset('userpluggins/coffe/js/main.js')}}"></script>	
-			<script src="{{asset('userpluggins/js/bootstrap.js')}}"></script>	
-			<script src="{{asset('userpluggins/js/custom.js')}}"></script>
+		
 		
 			
 		

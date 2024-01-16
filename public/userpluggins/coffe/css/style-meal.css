@@ -1,13 +1,15 @@
 
 .page-header {
-    background-color:brown;
+  background-color:brown;
     color: #fff;
-    padding: 20px;
+    padding: 40px;
+    margin: 10px;
     text-align: center;
 }
 
 .page-header h2 {
-    margin: 0;
+    margin: 3px;
+    color: #fff;
 }
 
 .menu {
@@ -23,6 +25,9 @@
     background-color: #f9f9f9;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width:675.2px){
+  
 }
 
 .menu-img img {
@@ -55,14 +60,17 @@
 }
 .img1 img {
     
-    width: 400px;
-    height: 400px;
+    width: 30em;
+    height: 30em;
     border-radius: 40%;
+   padding: 40px;
     object-fit: cover;
     display: block;
     margin: 20px; /* يوضع الصورة في الوسط أفقياً */
 }
-.row h2,strong{
+
+
+.row strong{
     color: rgba(74, 29, 18, 0.905);
     
 }

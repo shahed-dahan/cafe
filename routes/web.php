@@ -7,6 +7,7 @@ use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\cartcontroller;
 use App\Http\Controllers\CustomersController;
+use App\Http\Controllers\BookingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -64,6 +65,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('add-cart',[cartcontroller::class,'store']);
     Route::get('cart',[cartcontroller::class,'show']);
     Route::post('create-order',[OrderController::class,'store']);
+    Route::get('booking',[BookingController::class,'store']);
+    Route::get('about',[homecontroller::class,'about']);
+
     Route::get('/delivery/{order}', 'OrderController@showDeliveryPage');
     Route::get('/', function () {
         return view('UserViews.master');
