@@ -65,9 +65,11 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('add-cart',[cartcontroller::class,'store']);
     Route::get('cart',[cartcontroller::class,'show']);
     Route::post('create-order',[OrderController::class,'store']);
-    Route::get('booking',[BookingController::class,'store']);
+    Route::get('booking-create',[BookingController::class,'create']);
+    Route::post('booking-store',[BookingController::class,'store']);
+    Route::get('booking',[BookingController::class,'index']);
     Route::get('about',[homecontroller::class,'about']);
-
+    Route::get('homee',[homecontroller::class,'homee']);
     Route::get('/delivery/{order}', 'OrderController@showDeliveryPage');
     Route::get('/', function () {
         return view('UserViews.master');

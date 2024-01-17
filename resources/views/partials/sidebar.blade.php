@@ -44,6 +44,16 @@
                           <li><a  href="{{url('customer')}}">عرض</a></li>
                       </ul>
                   </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>   حجز طاولة </span>
+                      </a>
+                      <ul class="sub">
+                         
+                          <li><a  href="{{url('booking-index')}}">عرض</a></li>
+                      </ul>
+                  </li>
 
 
               </ul>

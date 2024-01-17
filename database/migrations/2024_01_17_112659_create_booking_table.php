@@ -15,10 +15,13 @@ return new class extends Migration
     {
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
             $table->string('table_number');
-            $table->timestamp('reservation_date')->nullable();
-            $table->bigInteger('reservation_time')->unsigned()->nullable(); 
-            $table->timestamps();
+            $table->date('date');
+            $table->time('time');
+            // $table->timestamps();
         });
     }
 

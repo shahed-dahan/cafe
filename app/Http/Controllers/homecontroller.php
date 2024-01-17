@@ -28,4 +28,8 @@ class homecontroller extends Controller
      public function about(){
         return view('UserViews.about');
     }
+    public function homee(){
+        return view('UserViews.homee');
+    }
+    
 }

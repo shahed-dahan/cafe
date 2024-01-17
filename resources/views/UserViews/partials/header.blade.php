@@ -9,7 +9,7 @@
 					  
 				      <nav id="nav-menu-container">
 					  <ul class="nav-menu">
-				          <li class=><a href="{{route('menu')}}">Home</a></li>
+				          <li class=><a href="{{url('homee')}}">Home</a></li>
 				          <li><a href="{{route('menu')}}">Menu</a></li>
 				          <li><a href="{{url('about')}}">About</a></li>
 				          <li><a href="{{url('booking')}}">book</a></li>

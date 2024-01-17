@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
-                                    <label for="exampleInputEmail1">الصنف</label>
+                                      <label for="exampleInputEmail1">الصنف</label>
                                         <select class="form-control" name="menu_id">
                                         <option value="0">يرجى اختيار الصنف</option>
                                             @foreach($menus as $key=>$menu)
