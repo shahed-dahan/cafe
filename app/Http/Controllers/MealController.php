@@ -12,7 +12,8 @@ use App\Imports\MealsImport;
 use App\Traits\imageTrait;
 
 class MealController extends Controller
-{use imageTrait;
+{
+    use imageTrait;
     public function create(){
         $menus= Menu::all();
         return view('meal.create',compact('menus'));

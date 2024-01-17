@@ -7,7 +7,7 @@
                               تعديل تصنيف
                           </header>
                           <div class="panel-body">
-                              <form role="form" method="POST" action='{{url("menu-update/{$menu->id}")}}' 
+                              <form role="form" method="POST" action='{{url("user-update/{$user->id}")}}' 
                               enctype="multipart/form-data">
                                 @csrf
                                 @if(session()->has('success'))
@@ -23,15 +23,15 @@
                                 @endif
                                 <div class="row">
                                   <div class="form-group col-md-6">
-                                      <label for="exampleInputEmail1">اسم التصنيف</label>
-                                      <input type="text" class="form-control" value="{{$menu->name}}" name="name" id="exampleInputEmail1" placeholder="Enter email">
+                                      <label for="exampleInputEmail1">اسم المستخدم</label>
+                                      <input type="text" class="form-control" value="{{$user->name}}" name="name" id="exampleInputEmail1" placeholder="Enter email">
                                   </div>
                                  </div>
                                  <div class="row">
                                   <div class="form-group col-md-6">
-                                      <label for="exampleInputFile">صورة التصنيف</label>
-                                      <input type="file" name="image" id="exampleInputFile">
-                                      <img width="50" src='{{asset("menuImage/{$menu->image}")}}'>
+                                      <label for="exampleInputFile">الايميل</label>
+                                      <input type="text" name="form-control" id="exampleInputFile" value="{{$user->email}}" name="name" placeholder="Enter email">
+                                   
 
                                   </div>
 </div>

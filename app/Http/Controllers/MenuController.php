@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use Illuminate\Support\Facades\Validator;
-use App\Traits\imageTrait;
+
 
 class MenuController extends Controller
 {
-    use imageTrait;
+   
     public function create(){
         return view('menu.create');
     }
@@ -30,12 +30,12 @@ class MenuController extends Controller
         $menu = new Menu();
         $menu->name=$request->name;
         $menu->image= $this->verifyAndUpload($request,'image','menuImage');
-        // if (!empty ($request->file('image'))) {
-        //     $imageName = uniqid() . $request->file('image')->getClientOriginalName();
+        if (!empty ($request->file('image'))) {
+            $imageName = uniqid() . $request->file('image')->getClientOriginalName();
 
-        //     $request->file('image')->move(public_path('menuImage'), $imageName);
-        //     $menu->image= $imageName;
-        // }
+            $request->file('image')->move(public_path('menuImage'), $imageName);
+            $menu->image= $imageName;
+        }
 
         $menu->save();
         return redirect()->back()->with('success','تمت الاضافة بنجاح');

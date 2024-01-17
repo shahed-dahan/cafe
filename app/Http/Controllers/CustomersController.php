@@ -15,8 +15,7 @@ class CustomersController extends Controller
     public function index()
     {
         $users=User::all();
-        return view('User.index',compact('users
-        '));
+        return view('User.index',compact('users'));
     }
 
     /**
