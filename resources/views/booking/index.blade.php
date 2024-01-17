@@ -62,9 +62,9 @@
                                 <td>{{$booking->email}}</td>
                                 <td>{{$booking->phone}}</td>
                                     <td>{{$booking->table_number}}</td>
-                                    <td>{{$booking->reservation_dateit->format('d/m/Y')}}</td>
+                                    <td>{{$booking->date}}</td>
                                    
-                                    <td>{{$booking->reservation_time }}</td>
+                                    <td>{{$booking->time }}</td>
                                    
                                     <td>
                                     <form method="post" action='{{url("booking-destroy/$booking->id}")}}'>
