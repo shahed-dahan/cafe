@@ -12,8 +12,9 @@
 				          <li class=><a href="{{url('homee')}}">Home</a></li>
 				          <li><a href="{{route('menu')}}">Menu</a></li>
 				          <li><a href="{{url('about')}}">About</a></li>
-				          <li><a href="{{url('booking')}}">book</a></li>
-				         
+				          <li><a href="{{url('booking-create')}}">booking</a></li>
+				          <li><a href="{{url('cart')}}">cart</a></li>
+						  <li><a href="{{url('create-customers')}}">customers</a></li>
 				          <!-- <li class="menu-has-children"><a href="" class="sf-with-ul">Pages</a>
 				            <ul style="display: none;">
 				              <li><a href="generic.html">Generic</a></li>

@@ -70,7 +70,7 @@
                                       </select>
                                        
                                       </div>
-                                      </div>
+                                  </div>
                                       </div>
                               
                                                 <div class="form-actions center">
@@ -85,6 +85,7 @@
                               <tr>
                                   <th>#</th>
                                   <th>اسم الزبون</th>
+                                  <th>العنوان</th>
                                   <th>التاريخ</th>
                                   <th>حالة الطلبية</th>
                                   <th>عرض</th>

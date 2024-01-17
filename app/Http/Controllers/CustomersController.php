@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\customer;
+use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Models\User;
-class CustomersController extends Controller
+class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -46,7 +46,6 @@ class CustomersController extends Controller
             'address' => $request->address,
             'user_id' => \Auth::user()->id,
             'state' => 1
-            
         ]);
         // $customer=Customer::firstOrCreate([
         //     'user_id' => \Auth::user()->id,
@@ -58,17 +57,16 @@ class CustomersController extends Controller
         //     'state' => 1
         // ]); 
         // if we have customer with current user id it gives the customer otherwise it create new one
-   
+       
        
         $customer=Customer::firstOrNew([
                 'user_id' => \Auth::user()->id,
             ]);
-          
+            
                 $customer->customer_name = $request->customer_name;
                 $customer->phone =$request->phone;
                 $customer->address = $request->address;
                 $customer->state = 1;
-               dd($request->input);
              $customer->save(); 
             // if doesn't find the object with current user id it return new object of model
 
@@ -120,7 +118,7 @@ class CustomersController extends Controller
         //
     }
 
-    public function UserAdmin($id){
+    public function userAdmin($id){
         $user=User::find($id);
         if($user->is_admin==1){
             $user->update(['is_admin'=>0]);

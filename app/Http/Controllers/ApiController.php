@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Meal;
+use App\Models\Booking;
 class ApiController extends Controller
 {
     public function getMenu(){

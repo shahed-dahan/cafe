@@ -190,8 +190,9 @@ button, input {
                                     </div>
                                 </div>
                                 <div class="control-group">
-                                    <div class="input-group">
-                                    <select class="custom-select form-control">
+                                    <div class="input-group-append">
+                                    <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
+                                    <select class="custom-select form-control" name="table_number">
                                             <option selected="">table_number</option>
                                             <option value="1">1 table_number</option>
                                             <option value="2">2 table_number</option>
@@ -204,11 +205,19 @@ button, input {
                                             <option value="9">9 table_number</option>
                                             <option value="10">10 table_number</option>
                                         </select>
-                                        <div class="input-group-append">
-                                            <div class="input-group-text"><i class="fa fa-mobile-alt"></i></div>
-                                        </div>
+                                      
                                     </div>
                                 </div>
+                                <form action="{{url('api/change-state')}}" method="post" id="myForm">
+                                        @csrf
+                                    table Status : <select name="state" class="form-control" >
+                                        <option value="empty"> empty</option>
+                                        <option value="reserved" >  reserved</option>
+                                        <option value="waiting"> waiting</option>
+                                       
+                                          </select>
+                                        
+                                        </form>
                                 <div class="control-group">
                                    
                                     <div class="input-group input-large" data-date="13/07/2013" data-date-format="mm/dd/yyyy" >
@@ -241,3 +250,7 @@ button, input {
         </div>
 
         @endsection
+        @section('script')
+
+
+@endsection

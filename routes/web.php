@@ -71,6 +71,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('about',[homecontroller::class,'about']);
     Route::get('homee',[homecontroller::class,'homee']);
     Route::get('/delivery/{order}', 'OrderController@showDeliveryPage');
+    
     Route::get('/', function () {
         return view('UserViews.master');
     });

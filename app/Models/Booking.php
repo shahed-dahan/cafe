@@ -12,5 +12,5 @@ class Booking extends Model
    public $table="booking";
    public $incrementing=false;
    public $timestamps = false;
-    protected $fillable = ['name','email','phone','table_number', 'date', 'time'];
+    protected $fillable = ['name','email','phone','table_number','state', 'date', 'time'];
 }

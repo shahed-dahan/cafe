@@ -17,12 +17,14 @@ class BookingController extends Controller
     $booking->email = $request->email;
     $booking->phone = $request->phone;
     $booking->table_number = $request->table_number;
+    $booking->state = $request->state;
     $booking->date = $request->date;
     $booking->time = $request->time;
     $booking->save();
     return redirect()->back()->with('success','تمت الاضافة بنجاح');
 }
-public function index(){
+public function index(Request $request){
+    
     $booking=Booking::all();
     return view('booking.index',compact('booking'));
     

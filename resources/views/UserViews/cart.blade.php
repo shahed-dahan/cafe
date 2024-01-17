@@ -22,11 +22,16 @@
 @endsection
 @yield('style')
 @section('content')
-<div class="page-header mb-0">
+<div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <h2>Cart</h2>
+                    </div>
+                    <div class="col-12" id="smalllist">
+                        
+                        <a href="{{url('order')}}" class="nav-item nav-link active">order</a>
+                      
                     </div>
                   
                 </div>
@@ -54,9 +59,9 @@
                                 @foreach($carts as $cart)
                                 <tr>
                                 @csrf 
-                                    <td>{{$cart->meal->name  ?? 'N/A'}}</td>
+                                    <td>{{$cart->meal->name }}</td>
                                     <td>{{$cart->quantity}}</td>
-                                    <td>{{$cart->meal->price  ?? 'N/A'}}</td>
+                                    <td>{{$cart->meal->price }}</td>
                                     <td>
                                         <form method="post" action='{{url("cart-destroy/$cart->id")}}' >
                                             @method('delete')

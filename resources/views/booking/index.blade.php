@@ -7,6 +7,19 @@
                           <header class="panel-heading">
                      حجز الطاولة
                           </header>
+                          @if(session()->has('success'))
+                                <div class="row">
+                                    <div class="alert alert-success fade in">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>{{session()->get('success')}}</strong>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                <form action="{{url('booking')}}" class="form-horizontal tasi-form">
+                                    @csrf
                           <div class="panel-body">
                 <div class="adv-table editable-table ">
                     <div class="clearfix" style="margin-bottom: 5px">
@@ -24,19 +37,24 @@
                                 <li><a href="#">Export to Excel</a></li>
                             </ul>
                         </div>
-                        <div class="col-lg-10">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                      <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">table</label>
+                                      <div class="col-lg-10">
                                           
-                                          <select class="form-control js-example-basic-single" name="state">
-                                            <option value="" selected>جميع الحالات</option>
-                                            <option value="wait" @if(app('request')->input('state')=='wait') selected @endif> wait</option>
-                                            <option value="accept" @if(app('request')->input('state')=='accept') selected @endif> accept</option>
-                                            <option value="delivered" @if(app('request')->input('state')=='delivered') selected @endif> delivered</option>
-                                            <option value="refuse" @if(app('request')->input('state')=='refuse') selected @endif> refuse</option>
-                                            
-                                          </select>
-                                           
-                                          </div>
+                                      <select class="form-control js-example-basic-single" name="state">
+                                        <option value="" selected>جميع الحالات</option>
+                                        <option value="empty" @if(app('request')->input('state')=='empty') selected @endif> empty</option>
+                                        <option value="reserved" @if(app('request')->input('reserved')=='reserved') selected @endif> reserved</option>
+                                        <option value="waiting" @if(app('request')->input('state')=='waiting') selected @endif> waiting</option>
+                                        
+                                      </select>
+                                       
+                                      </div>
+                                  </div>
+                                </div>
                     </div>
+                    </form>
                     <div class="space15"></div>
                           <table class="table">
                               <thead>
@@ -61,12 +79,14 @@
                                 <td>{{$booking->name}}</td>
                                 <td>{{$booking->email}}</td>
                                 <td>{{$booking->phone}}</td>
-                                    <td>{{$booking->table_number}}</td>
-                                    <td>{{$booking->date}}</td>
+                                  <td>{{$booking->table_number}}</td>
+                                 <td>{{$booking->state}}</td>
+                                 <td>{{$booking->date}}</td>
                                    
                                     <td>{{$booking->time }}</td>
                                    
                                     <td>
+
                                     <form method="post" action='{{url("booking-destroy/$booking->id}")}}'>
                                         @method('delete')
                                         @csrf
@@ -90,3 +110,36 @@
                  
               </div>
 @endsection
+@section('script')
+
+  <!--select2-->
+  <script type="text/javascript" src="{{asset('pluggins/assets/select2/js/select2.min.js')}}"></script>
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+    $('[name=date]').change(function(){
+        _this=$(this);
+        $('[name=date]').attr('min',_this.val());
+        // $('[name=to_date]').val(_this.val());
+    });
+    $('[name=time]').change(function(){
+        _this=$(this);
+        $('[name=time]').attr('max',_this.val());
+        // $('[name=from_date]').val(_this.val());
+    });
+
+});
+</script>
+   <!--select2-->
+   <script type="text/javascript">
+
+$(document).ready(function () {
+    $(".js-example-basic-single").select2({
+        dir: "rtl"
+    });
+
+});
+</script>
+  @endsection
+
