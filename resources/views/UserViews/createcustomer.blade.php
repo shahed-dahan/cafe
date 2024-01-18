@@ -62,6 +62,18 @@
                         <div class="booking-form">
                             <form  method="POST" action="{{url('create-customers')}}">
                             @csrf 
+                            @if(session()->has('errors'))
+                                <div class="row">
+                                    <div class="alert alert-danger">
+                                            <button data-dismiss="alert" class="close close-sm" type="button">
+                                                <i class="fa fa-times"></i>
+                                            </button>
+                                            <strong>{{session()->get('errors')}}</strong>
+                                    </div>
+                                </div>
+                                    
+                                @endif
+                                <input hidden  name="user_id" value="{{\Auth::user()->id}}">
                                 <div class="control-group">
                                     <div class="input-group">
                                         <input type="text" name="customer_name" class="form-control" placeholder="Customer Name" required="required" />

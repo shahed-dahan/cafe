@@ -24,8 +24,10 @@ class BookingController extends Controller
     return redirect()->back()->with('success','تمت الاضافة بنجاح');
 }
 public function index(Request $request){
-    
     $booking=Booking::all();
+    if($request->state){
+        $booking=Booking::where('state',$request->state)->get();
+    }
     return view('booking.index',compact('booking'));
     
 }

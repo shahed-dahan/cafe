@@ -58,6 +58,9 @@
                                             </div>
                                     </div>
                                     <button type="submit" style="margin-top: 10px;padding: 5px 15px;" class="btn" >add to cart</button>
+                                   
+                                    <!-- <a  class="btn custom-btn" href='{{url("create-customers")}}'>add to data</a> -->
+                               
                                         <a  class="btn custom-btn" href='{{url("meal/$meal->menu_id")}}'>back</a>
                                 
                                 </div>

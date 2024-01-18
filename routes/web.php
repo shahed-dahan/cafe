@@ -35,6 +35,7 @@ Route::group(['middleware' => ['auth','admin']], function () {
     Route::post('meal-update/{id}',[MealController::class,'update']);
     Route::post('menu-update/{id}',[MenuController::class,'update']);
     Route::delete('menu-destroy/{id}',[MenuController::class,'destroy']);
+    Route::delete('meal-destroy/{id}',[MealController::class,'destroy']);
     Route::get('meal-create',[MealController::class,'create']);
     Route::post('meal-store',[MealController::class,'store']);
     Route::get('customer',[CustomersController::class,'index']);
@@ -61,7 +62,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('menu',[homecontroller::class,'getmenu'])->name('menu');
     Route::get('meal/{id}',[homecontroller::class,'getmeal']);
     Route::get('meal-detail/{id}',[homecontroller::class,'mealDetail']);
-    Route::post('cart-destroy/{id}',[cartcontroller::class,'destroy']);
+    Route::delete('cart-destroy/{id}',[cartcontroller::class,'destroy']);
     Route::post('add-cart',[cartcontroller::class,'store']);
     Route::get('cart',[cartcontroller::class,'show']);
     Route::post('create-order',[OrderController::class,'store']);

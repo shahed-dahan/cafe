@@ -38,7 +38,7 @@
                   <li class="sub-menu">
                       <a href="javascript:;" >
                           <i class="fa fa-laptop"></i>
-                          <span>customer</span>
+                          <span>الزبون</span>
                       </a>
                       <ul class="sub">
                           <li><a  href="{{url('customer')}}">عرض</a></li>
@@ -51,7 +51,7 @@
                       </a>
                       <ul class="sub">
                          
-                          <li><a  href="{{url('booking-index')}}">عرض</a></li>
+                          <li><a  href="{{url('booking')}}">عرض</a></li>
                       </ul>
                   </li>
 

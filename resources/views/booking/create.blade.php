@@ -119,6 +119,9 @@ button, select {
 button, input {
     overflow: visible;
 }
+option{
+    background:black;
+}
 
  </style>
  
@@ -210,7 +213,7 @@ button, input {
                                 </div>
                                 <form action="{{url('api/change-state')}}" method="post" id="myForm">
                                         @csrf
-                                    table Status : <select name="state" class="form-control" >
+                                  <select name="state" class="form-control" >
                                         <option value="empty"> empty</option>
                                         <option value="reserved" >  reserved</option>
                                         <option value="waiting"> waiting</option>

@@ -18,7 +18,7 @@
                                 </div>
                                     
                                 @endif
-                                <form action="{{url('booking')}}" class="form-horizontal tasi-form">
+                                <form action="{{url('booking')}}" class="form-horizontal tasi-form" id="searchform">
                                     @csrf
                           <div class="panel-body">
                 <div class="adv-table editable-table ">
@@ -45,7 +45,7 @@
                                       <select class="form-control js-example-basic-single" name="state">
                                         <option value="" selected>جميع الحالات</option>
                                         <option value="empty" @if(app('request')->input('state')=='empty') selected @endif> empty</option>
-                                        <option value="reserved" @if(app('request')->input('reserved')=='reserved') selected @endif> reserved</option>
+                                        <option value="reserved" @if(app('request')->input('state')=='reserved') selected @endif> reserved</option>
                                         <option value="waiting" @if(app('request')->input('state')=='waiting') selected @endif> waiting</option>
                                         
                                       </select>
@@ -118,16 +118,11 @@
 
 $(document).ready(function () {
 
-    $('[name=date]').change(function(){
+    $('[name=state]').change(function(){
         _this=$(this);
-        $('[name=date]').attr('min',_this.val());
-        // $('[name=to_date]').val(_this.val());
+        $('#searchform').submit();
     });
-    $('[name=time]').change(function(){
-        _this=$(this);
-        $('[name=time]').attr('max',_this.val());
-        // $('[name=from_date]').val(_this.val());
-    });
+    
 
 });
 </script>

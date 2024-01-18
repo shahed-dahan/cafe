@@ -29,7 +29,7 @@ class MenuController extends Controller
       
         $menu = new Menu();
         $menu->name=$request->name;
-        $menu->image= $this->verifyAndUpload($request,'image','menuImage');
+        // $menu->image= $this->verifyAndUpload($request,'image','menuImage');
         if (!empty ($request->file('image'))) {
             $imageName = uniqid() . $request->file('image')->getClientOriginalName();
 

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 use App\Models\User;
-class CustomerController extends Controller
+class CustomersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -25,6 +25,9 @@ class CustomerController extends Controller
      */
     public function create()
     {
+        if(\Auth::user()->customer)
+        return redirect('/menu');
+    else
         return view('UserViews.createcustomer');
     }
 

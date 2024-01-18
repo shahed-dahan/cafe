@@ -43,7 +43,7 @@
                                         <form method="post" action='{{url("menu-destroy/$menu->id")}}'>
                                             @method('delete')
                                             @csrf
-                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            <button type="submit" class="btn btn-danger btn-sm">حذف</button>
                                         </form>
                                     </td>
                                 </tr>

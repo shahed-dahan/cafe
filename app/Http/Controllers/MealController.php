@@ -32,13 +32,13 @@ class MealController extends Controller
         $meal->price=$request->price;
         $meal->description=$request->description;
         $meal->menu_id=$request->menu_id;
-        $meal->image= $this->verifyAndUpload($request,'image','mealImage');
-        // if (!empty ($request->file('image'))) {
-        //     $imageName = uniqid() . $request->file('image')->getClientOriginalName();
+        // $meal->image= $this->verifyAndUpload($request,'image','mealImage');
+        if (!empty ($request->file('image'))) {
+            $imageName = uniqid() . $request->file('image')->getClientOriginalName();
 
-        //     $request->file('image')->move(public_path('mealImage'), $imageName);
-        //     $meal->image= $imageName;
-        // }
+            $request->file('image')->move(public_path('mealImage'), $imageName);
+            $meal->image= $imageName;
+        }
 
         $meal->save();
         return redirect()->back()->with('success','تمت الاضافة بنجاح');
@@ -50,24 +50,23 @@ class MealController extends Controller
         return view('meal.edit',compact('menus','meal'));
     }
     public function update($id,Request $request){
-        
-        $meal = new Meal();
+        $meal=Meal::find($id);
         $meal->name=$request->name;
-        $meal->price=$request->price;
-        $meal->description=$request->description;
-        $meal->menu_id=$request->menu_id;
+       
         if (!empty ($request->file('image'))) {
-            if(\File::exists(public_path('mealImage/').$menu->image)){
-                \File::delete(public_path('mealImage/').$menu->image);
+            if(\File::exists(public_path('mealImage/').$meal->image)){
+                \File::delete(public_path('mealImage/').$meal->image);
             }
+           
             $imageName = uniqid() . $request->file('image')->getClientOriginalName();
-
             $request->file('image')->move(public_path('mealImage'), $imageName);
             $meal->image= $imageName;
+            $meal->price=$request->price;
+            $meal->description=$request->description;
+            $meal->menu_id=$request->menu_id;
         }
-
         $meal->save();
-        return redirect()->back()->with('success','تمت الاضافة بنجاح');
+        return redirect()->back()->with('success','تم التعديل بنجاح');
     }
     public function index(){
         $meals=Meal::all();
